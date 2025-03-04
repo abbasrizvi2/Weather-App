@@ -14,3 +14,4 @@ export const geoApiOptions = {
 //     .then((response) => console.log(response))
 //     .catch(err => console.log(err))
 
+export const dailyApi = "https://api.openweathermap.org/data/2.5/weather"
