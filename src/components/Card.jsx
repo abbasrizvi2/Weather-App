@@ -14,15 +14,19 @@ export default function Card() {
               </div>
               <div className="flex justify-around mt-3">
                   <div>22 C</div>
-                  <div>
+                  {/* <div>
                       <table className="border-separate border-spacing-x-2">
-                      <th>Details</th>
+              
+              <tbody>
+              <th>Details</th>
                       <tr><td>Feels</td><td>22C</td></tr>
                       <tr><td>Wind</td><td>2.6ms</td></tr>
                       <tr><td>Humidity </td><td>78%</td></tr>
-                      <tr><td>Pressure</td><td>1015 hPa</td></tr>
+                <tr><td>Pressure</td><td>1015 hPa</td></tr>
+                </tbody>
+                
                   </table>
-                  </div>
+                  </div> */}
               </div>
         </div>
     </div>

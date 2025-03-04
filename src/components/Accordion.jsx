@@ -20,7 +20,7 @@ export default function Accordion() {
         </div>
       </div>
       {isOpen && <div className="flex flex-col">
-      <div className="flex justify-between p-2">
+      {/* <div className="flex justify-between p-2">
         <div className="text-gray-400">Pressure</div>
         <div className="w-[150px] flex justify-between">
           <div>1012 hPa</div>
@@ -30,17 +30,19 @@ export default function Accordion() {
       </div>
 
       <div className="w-full p-2">
-        <table className="w-full">
+          <table className="w-full">
+            <tbody>
           <tr className="flex justify-between w-full">
             <td className="text-gray-400">Clouds</td>
-            <td className="flex space-x-4">  {/* to give space b/w the spaan */}
+            <td className="flex space-x-4">  
               <span>4%</span>
               <span className="text-gray-400">Wind Speed</span>
             </td>
             <td>2.63m/s</td>
-          </tr>
+              </tr>
+              </tbody>
         </table>
-        </div>
+        </div> */}
         </div>}
       
     </div>

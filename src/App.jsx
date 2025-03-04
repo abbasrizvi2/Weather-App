@@ -6,10 +6,13 @@ import Search from './components/Search'
 
 function App() {
   
+  const handleOnSearchChange = (searchData) => {
+    console.log(searchData)
+  }
 
   return (
     <div>
-      <Search />   
+      <Search onSearchChange={handleOnSearchChange} />   
       <Card />
       <Accordion/>
     </div>
