@@ -17,7 +17,6 @@ const Search = () => {
     setSearch(value);
   };
 
- console.log("value of search is ", search)
   useEffect(() => {
     if (!search) return; // Prevents fetching when search is empty
 
@@ -25,14 +24,19 @@ const Search = () => {
       try {
         const response = await fetch(`${GEO_API_URL}/cities?namePrefix=${search}`, geoApiOptions);
         const data = await response.json();
-        setLatitude(data?.data.map((city)=>city.latitude)[0])
-        setLongitude(data?.data.map((city)=>city.longitude)[0])
-        setCity(data?.data.map((city)=>city.city)[0])
+        // setLatitude(data?.data.map((city)=>city.latitude)[0])
+        setLatitude(data?.data[0].latitude)
+        // setLongitude(data?.data.map((city)=>city.longitude)[0])
+        setLongitude(data?.data[0].longitude)
+        setCity(data?.data[0].city)
         // console.log(data?.data.map((city)=>city.latitude));
       } catch (err) {
         console.error("Error fetching data:", err);
       }
     };
+    console.log("value of search is ", search)
+    console.log("value of latitude is ", latitude)
+
 
     // fetchData()
 
