@@ -1,12 +1,15 @@
-export default function Card() {
+export default function Card({ selectedCity = {} }) {
+
+  const weatherDescription = selectedCity?.weather?.length ? selectedCity.weather[0].description : "No Weather Data";
+  const City = selectedCity?.name || "City"
   return (
     <div>
           <div className="border border-black w-[400px] h-[250px] mt-16 mx-auto bg-gray-800 text-white p-2 text-xl
       rounded-xl shadow-black drop-shadow-xl">
               <div className="flex justify-around mt-5">
                   <div>
-                  <div>CityName</div>
-                    <div>Broken Clouds</div>
+            <div>{City}</div>
+            <div>{weatherDescription}</div>
                   </div>
                   <div>
                       Cloud Image
