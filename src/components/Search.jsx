@@ -21,7 +21,7 @@ const Search = () => {
   const longitude = select.longitude
 
   useEffect(() => {
-    if (!search) return; // Prevents fetching when search is empty
+    if (!search || search === select.name) return; // Prevents fetching when search is empty or womn't render useEffect if item is selected and search data has been changed
 
     const fetchData = async () => {
       try {
@@ -42,7 +42,7 @@ const Search = () => {
     }, 600);
 
     return () => clearTimeout(delayDebounceFn);
-  }, [search]);
+  }, [search,select.name]);
   
 
   useEffect(() => {
@@ -69,8 +69,9 @@ const Search = () => {
   },[latitude,longitude,search])
   
   // console.log(`selected city  data is ${JSON.stringify(select, null, 2)}`)
-  console.log(weather)
+  // console.log(weather)
   console.log("cities are ", city)
+  console.log(search)
 
   //*** Vey important
   //* if you want indent with object `${object}` it will show [object] so to convert object into string with
