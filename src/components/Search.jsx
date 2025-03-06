@@ -80,7 +80,7 @@ const Search = () => {
   const handleClick = (id) => {
     const selected = city.find((city) => city.id === id ) //this will return an object (find is use to find the latest matched value)
     setSearch(selected.name)
-    setCity((prev) => prev.length = 0)
+    setCity([])
     setSelect(selected) 
   }
 
