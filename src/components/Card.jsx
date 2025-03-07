@@ -1,6 +1,9 @@
 export default function Card({ selectedCity={} }) { //default empty coz if react render and find selectedCity empty it won't throw an error
 
   const weatherDescription = selectedCity?.weather?.length ? selectedCity.weather[0].description : "No Weather Data";
+  // ****  VEry Very Important      necessary to do bcoz was showing error
+  //if we did directly in div selectedCity.weather[0].description (during render it shows selectedCity is undefined so how weather[0] is there)
+
   const City = selectedCity?.name || "City"
   return (
     <div>
