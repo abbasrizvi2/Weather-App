@@ -104,7 +104,7 @@ const Search = () => {
         onChange={handleChange}
         className="w-12/12 mx-auto p-1 text-xl"
       />
-      {city.length > 0 && city.map((city) => {
+      {Array.isArray(city) && city.length>0 && city.map((city) => { //same issue typing fast will make screen blank see useEffect(setCity)
         return (
           <div key={city.id}
             className="hover:cursor-pointer"
